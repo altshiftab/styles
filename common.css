@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/mulish-v12-latin-regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''), url('../fonts/mulish-v12-latin-900.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/mulish-v12-latin-700.woff2') format('woff2');
+    font-display: swap;
+}
+
+:root {
+    --as-beige: #E1DEDE;
+    --as-black: #252525;
+    --as-orange: #E26C0F;
+    --as-hover-orange: #C05B0C;
+    --as-light-grey: #F8F8F8;
+
+    --altshift-border-width: 0.125rem;
+    --altshift-box-offset-top: 0.5rem;
+    --altshift-box-offset-left: 0.625rem;
+
+    --altshift-main-color: var(--as-beige);
+    --altshift-opposite-main-color: var(--as-black);
+
+    --altshift-complement-color: var(--as-light-grey);
+    --altshift-opposite-complement-color: var(--as-orange);
+
+    --altshift-text-color: var(--as-black);
+    --altshift-opposite-text-color: var(--as-light-grey);
+
+    --altshift-border-color: var(--as-black);
+    --altshift-opposite-border-color: var(--as-beige);
+
+    --altshift-box-color: var(--as-light-grey);
+    --altshift-opposite-box-color: var(--as-beige);
+
+    --header-footer-width: 85%;
+    --main-width: 80%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --altshift-main-color: var(--as-black);
+        --altshift-opposite-main-color: var(--as-beige);
+
+        --altshift-complement-color: var(--as-orange);
+        --altshift-opposite-complement-color: var(--as-light-grey);
+
+        --altshift-text-color: var(--as-light-grey);
+        --altshift-opposite-text-color: var(--as-black);
+
+        --altshift-border-color: var(--as-beige);
+        --altshift-opposite-border-color: var(--as-black);
+
+        --altshift-box-color: var(--as-beige);
+        --altshift-opposite-box-color: var(--as-light-grey);
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    scrollbar-color: var(--altshift-text-color) var(--altshift-main-color);
+    scrollbar-width: thin;
+}
+
+html {
+    font-family: Mulish;
+}
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--altshift-main-color);
+    color: var(--altshift-text-color)
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, output, select {
+    background-color: var(--altshift-main-color);
+    color: var(--altshift-text-color);
+    padding: 0.5rem 1rem;
+    border: var(--altshift-border-width) solid var(--altshift-border-color);
+    font-family: inherit;
+}
+
+:where(input, textarea, output, select):focus-visible {
+    outline: var(--altshift-text-color) solid calc(0.5 * var(--altshift-border-width));
+}
+
+h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 15.625rem;
+    text-transform: lowercase;
+}
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 5.2083rem;
+    }
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+main {
+    width: var(--main-width)
+}
+
+
+header {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+altshift-header {
+    display: block;
+    width: var(--header-footer-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--altshift-main-color);
+}
+
+footer {
+    width: 100%;
+}
+
+altshift-footer {
+    display: block;
+    width: var(--header-footer-width);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
+
+altshift-footer svg {
+    width: 2rem;
+    path {
+        fill: var(--altshift-text-color);
+    }
+}
+
+:where(altshift-header, altshift-footer) > altshift-box > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0.5rem 2rem;
+
+    border-left: var(--altshift-border-width) solid var(--altshift-border-color);
+}
+
+altshift-header[compact] {
+    & > altshift-box {
+        border: unset;
+        background-color: var(--altshift-main-color);
+
+        border-top: var(--altshift-border-width) solid var(--altshift-border-color);
+        border-left: var(--altshift-border-width) solid var(--altshift-border-color);
+        border-right: var(--altshift-border-width) solid var(--altshift-border-color);
+
+        &:last-of-type {
+            border-bottom: var(--altshift-border-width) solid var(--altshift-border-color);
+        }
+
+        & > * {
+            border: unset;
+            padding: 2rem;
+        }
+    }
+}
+
