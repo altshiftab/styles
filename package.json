@@ -1,0 +1,10 @@
+{
+  "name": "altshift-styles",
+  "version": "0.0.1",
+  "files": [
+    "common.css",
+    "fonts"
+  ],
+  "main": "common.css"
+}
+

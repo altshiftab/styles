@@ -2,7 +2,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('../fonts/mulish-v12-latin-regular.woff2') format('woff2');
+    src: local(''), url('./fonts/mulish-v12-latin-regular.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -10,7 +10,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 900;
-    src: local(''), url('../fonts/mulish-v12-latin-900.woff2') format('woff2');
+    src: local(''), url('./fonts/mulish-v12-latin-900.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
-    src: local(''), url('../fonts/mulish-v12-latin-700.woff2') format('woff2');
+    src: local(''), url('./fonts/mulish-v12-latin-700.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -79,9 +79,8 @@
 
 html {
     font-family: Mulish;
-}
-@media screen and (max-width: 1280px) {
-    html {
+
+    @media screen and (max-width: 1280px) {
         font-size: 14px;
     }
 }
@@ -91,6 +90,28 @@ html, body {
     height: 100%;
     background-color: var(--altshift-main-color);
     color: var(--altshift-text-color)
+}
+
+header {
+    width: 100%;
+    padding-top: 2rem;
+    z-index: 30;
+}
+
+footer {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--main-width)
 }
 
 label {
@@ -114,9 +135,8 @@ h1 {
     font-weight: 900;
     font-size: 15.625rem;
     text-transform: lowercase;
-}
-@media screen and (max-width: 1280px) {
-    h1 {
+
+    @media screen and (max-width: 1280px) {
         font-size: 5.2083rem;
     }
 }
@@ -125,72 +145,3 @@ h2 {
     font-weight: 900;
     font-size: 2.5rem;
 }
-
-main {
-    width: var(--main-width)
-}
-
-
-header {
-    width: 100%;
-    padding-top: 2rem;
-}
-
-altshift-header {
-    display: block;
-    width: var(--header-footer-width);
-    margin-left: auto;
-    margin-right: auto;
-
-    background-color: var(--altshift-main-color);
-}
-
-footer {
-    width: 100%;
-}
-
-altshift-footer {
-    display: block;
-    width: var(--header-footer-width);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-}
-
-altshift-footer svg {
-    width: 2rem;
-    path {
-        fill: var(--altshift-text-color);
-    }
-}
-
-:where(altshift-header, altshift-footer) > altshift-box > * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 0.5rem 2rem;
-
-    border-left: var(--altshift-border-width) solid var(--altshift-border-color);
-}
-
-altshift-header[compact] {
-    & > altshift-box {
-        border: unset;
-        background-color: var(--altshift-main-color);
-
-        border-top: var(--altshift-border-width) solid var(--altshift-border-color);
-        border-left: var(--altshift-border-width) solid var(--altshift-border-color);
-        border-right: var(--altshift-border-width) solid var(--altshift-border-color);
-
-        &:last-of-type {
-            border-bottom: var(--altshift-border-width) solid var(--altshift-border-color);
-        }
-
-        & > * {
-            border: unset;
-            padding: 2rem;
-        }
-    }
-}
-
