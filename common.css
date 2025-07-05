@@ -126,6 +126,11 @@ input, textarea, output, select {
     font-family: inherit;
 }
 
+dialog {
+    background-color: var(--altshift-main-color);
+    color: var(--altshift-text-color);
+}
+
 :where(input, textarea, output, select):focus-visible {
     outline: var(--altshift-text-color) solid calc(0.5 * var(--altshift-border-width));
 }
