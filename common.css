@@ -136,7 +136,7 @@ dialog {
     outline: var(--altshift-text-color) solid calc(0.5 * var(--altshift-border-width));
 }
 
-input:invalid:not(:focus):not(:placeholder-shown) {
+input:invalid:not(:placeholder-shown) {
     outline-color: var(--as-red);
     border-color: var(--as-red);
 }
