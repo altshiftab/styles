@@ -28,6 +28,7 @@
     --as-orange: #E26C0F;
     --as-hover-orange: #C05B0C;
     --as-light-grey: #F8F8F8;
+    --as-red: #E20F1C;
 
     --altshift-border-width: 0.125rem;
     --altshift-box-offset-top: 0.5rem;
@@ -133,6 +134,11 @@ dialog {
 
 :where(input, textarea, output, select):focus-visible {
     outline: var(--altshift-text-color) solid calc(0.5 * var(--altshift-border-width));
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    outline-color: var(--as-red);
+    border-color: var(--as-red);
 }
 
 h1 {
