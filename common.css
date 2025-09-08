@@ -2,15 +2,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('./fonts/mulish-v12-latin-regular.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 900;
-    src: local(''), url('./fonts/mulish-v12-latin-900.woff2') format('woff2');
+    src: local('Mulish Regular'), local('Mulish'), url('./fonts/mulish-v12-latin-regular.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -18,7 +10,15 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
-    src: local(''), url('./fonts/mulish-v12-latin-700.woff2') format('woff2');
+    src: local('Mulish Bold'), url('./fonts/mulish-v12-latin-700.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Mulish Black'), url('./fonts/mulish-v12-latin-900.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -136,7 +136,7 @@ dialog {
     outline: var(--altshift-text-color) solid calc(0.5 * var(--altshift-border-width));
 }
 
-input:invalid:not(:placeholder-shown) {
+input:user-invalid {
     outline-color: var(--as-red);
     border-color: var(--as-red);
 }
