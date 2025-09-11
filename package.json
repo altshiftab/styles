@@ -1,8 +1,9 @@
 {
   "name": "@altshiftab/styles",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "files": [
     "common.css",
+    "common_web.css",
     "common_header_footer.css",
     "fonts",
     "favicon.svg"

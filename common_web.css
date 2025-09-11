@@ -1,0 +1,56 @@
+@import './common.css';
+
+:root {
+    --header-footer-width: 85%;
+    --main-width: 80%;
+}
+
+*, *::before, *::after {
+    scrollbar-color: var(--altshift-text-color) var(--altshift-main-color);
+    scrollbar-width: thin;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--altshift-main-color);
+    color: var(--altshift-text-color)
+}
+
+header {
+    width: 100%;
+    padding-top: 2em;
+    z-index: 30;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--main-width)
+}
+
+h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 15.625em;
+    text-transform: lowercase;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 5.2083em;
+    }
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+footer {
+    width: 100%;
+}
