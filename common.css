@@ -33,7 +33,9 @@
     --altshift-border-width: 0.125rem;
     --altshift-box-offset-top: 0.5em;
     --altshift-box-offset-left: 0.625em;
+}
 
+html:not(.dark) {
     --altshift-main-color: var(--altshift-beige);
     --altshift-opposite-main-color: var(--altshift-black);
 
@@ -48,10 +50,8 @@
 
     --altshift-box-color: var(--altshift-light-grey);
     --altshift-opposite-box-color: var(--altshift-beige);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    @media (prefers-color-scheme: dark) {
         --altshift-main-color: var(--altshift-black);
         --altshift-opposite-main-color: var(--altshift-beige);
 
