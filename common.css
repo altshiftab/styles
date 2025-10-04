@@ -35,21 +35,24 @@
     --altshift-box-offset-left: 0.625em;
 }
 
-html:not(.dark) {
-    --altshift-main-color: var(--altshift-beige);
-    --altshift-opposite-main-color: var(--altshift-black);
+html:not(.dark):not(.light) {
+    @media (prefers-color-scheme: light) {
+        --altshift-main-color: var(--altshift-beige);
+        --altshift-opposite-main-color: var(--altshift-black);
 
-    --altshift-complement-color: var(--altshift-light-grey);
-    --altshift-opposite-complement-color: var(--altshift-orange);
+        --altshift-complement-color: var(--altshift-light-grey);
+        --altshift-opposite-complement-color: var(--altshift-orange);
 
-    --altshift-text-color: var(--altshift-black);
-    --altshift-opposite-text-color: var(--altshift-light-grey);
+        --altshift-text-color: var(--altshift-black);
+        --altshift-opposite-text-color: var(--altshift-light-grey);
 
-    --altshift-border-color: var(--altshift-black);
-    --altshift-opposite-border-color: var(--altshift-beige);
+        --altshift-border-color: var(--altshift-black);
+        --altshift-opposite-border-color: var(--altshift-beige);
 
-    --altshift-box-color: var(--altshift-light-grey);
-    --altshift-opposite-box-color: var(--altshift-beige);
+        --altshift-box-color: var(--altshift-light-grey);
+        --altshift-opposite-box-color: var(--altshift-beige);
+
+    }
 
     @media (prefers-color-scheme: dark) {
         --altshift-main-color: var(--altshift-black);
@@ -67,6 +70,24 @@ html:not(.dark) {
         --altshift-box-color: var(--altshift-beige);
         --altshift-opposite-box-color: var(--altshift-light-grey);
     }
+}
+
+html.light {
+    --altshift-main-color: var(--altshift-beige);
+    --altshift-opposite-main-color: var(--altshift-black);
+
+    --altshift-complement-color: var(--altshift-light-grey);
+    --altshift-opposite-complement-color: var(--altshift-orange);
+
+    --altshift-text-color: var(--altshift-black);
+    --altshift-opposite-text-color: var(--altshift-light-grey);
+
+    --altshift-border-color: var(--altshift-black);
+    --altshift-opposite-border-color: var(--altshift-beige);
+
+    --altshift-box-color: var(--altshift-light-grey);
+    --altshift-opposite-box-color: var(--altshift-beige);
+
 }
 
 html.dark {
