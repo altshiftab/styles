@@ -1,6 +1,6 @@
 {
   "name": "@altshiftab/styles",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "files": [
     "common.css",
     "common_web.css",

@@ -69,6 +69,23 @@
     }
 }
 
+html.dark {
+    --altshift-main-color: var(--altshift-black);
+    --altshift-opposite-main-color: var(--altshift-beige);
+
+    --altshift-complement-color: var(--altshift-orange);
+    --altshift-opposite-complement-color: var(--altshift-light-grey);
+
+    --altshift-text-color: var(--altshift-light-grey);
+    --altshift-opposite-text-color: var(--altshift-black);
+
+    --altshift-border-color: var(--altshift-beige);
+    --altshift-opposite-border-color: var(--altshift-black);
+
+    --altshift-box-color: var(--altshift-beige);
+    --altshift-opposite-box-color: var(--altshift-light-grey);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
